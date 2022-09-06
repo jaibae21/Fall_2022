@@ -1,0 +1,26 @@
+
+Regular Expressions can't have spaces in them else it doesn't work right 
+QLineEdit and ComboBox have the methods setValidator 
+
+
+**
+	Input Validation 
+		QValidator returns three possible states
+			Invalid: string value definitely invalid
+			Intermediate: string value is a plausible intermediate value
+				having both acceptable and unacceptable such as typing a 1 but then typing a z for an int only. 
+				used for when the user isn't really done typing
+			Acceptable: string value is valid
+		Derived classes
+			Int, Double, Regular Expression Validator
+			Can use inheritance for a custom class
+		Regular expressions 
+		
+	Creating Professional looking applications
+		QWindow contains
+			pull down menus
+			tool bars
+			status bars
+			keyboard shortcuts
+			central widget (main focus)
+		A QAction can be triggered via the above

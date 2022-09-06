@@ -1,0 +1,48 @@
+
+eventfitler 
+	false will forward event
+	true will not
+	
+files
+	QFile myData ("data.txt")
+	myData.open(QIODevice::ReadOnly);
+	or
+	mydata.setFileName
+	
+	can look at size, permissions, setPermissions, rename, remove, exists copy, or atEnd of file
+	
+	QDir allows relative or absolute path names
+		standard is a / and qt will reinerpret for a machine 
+		can also force qt to make the path absolute
+		can do standard file type things such as returning to root, home, directory or cd into one 
+	
+	
+	
+
+**Event Handling
+	Event Loop
+		manages window events
+		generates its own events
+	QEvent base class of all events
+	event handling options (preference order)
+		reimplement specific event handler (different dedicated handlers for different types of events: key press, mouse click, timer, etc)
+		reimplement generic event handler (QObject::event())
+		use event filter on QObject (QObject::eventFilter())
+		use event filter on QApplication object
+		subclass QApplication and reimplement notify()
+	Input/Output related Classes
+		QIODevice is base class
+		QFile is derived from QIODevice
+		QDir provides access to directory structure and its contents
+		Default looking place for input and output files
+			local working subdirectory for the application (if created using QTCreator)
+			normally within the build subdirectory for the application (QtCreator)
+			within the source code subdirectory (command line)
+	Stream abstraction interface
+		provides I/O that resembles standard C++ file I/O
+		QTextStream provides a convenient interface for reading and writing text to a QIODevice, QByteArray, QString
+		QDataStream is encrypted (avoid using in this class)
+		
+		
+		
+		

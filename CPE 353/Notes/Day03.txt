@@ -1,0 +1,56 @@
+**Pre-Class
+	Dialogs
+		
+
+	Memory
+
+**InClass
+ssh -X jmg0053@blackhawk.ece.edu (is it faster than Moba?)
+whoami tells what account you're under
+comment whole: RMB toggle comment section (ctrl /)
+form editor: file->New->Qt form class
+MainWindow: has default toolbar built in
+QDialog inherits QWidget. QWidget is bare bones
+	Dialog Properties
+		Modal
+			blocks you from touching other stuff until you deal with the dialog
+			2 approaches:
+				set modal property of popup dialog to true
+					code or property window
+				give popup dialog a dedicated event loop
+					object.exec()
+					making an object visible: d.exec() which doesn't allow you to create another popup
+		Non-modal
+			can spawn multiple and opposite of modal
+			some with ability to turn into its own dialog
+			use dynamic allocation
+		accept()
+			when you want to close dialog: can connect LMB to accept and it will close windows and app
+	Static vs Dynamic memory allocation
+		Dynamic is the way to go with Qt
+		Static: every time you run, that application gets a record that goes on the stack. Has memory on runtime stack
+			if main ran a then main() when be put on hold and a() would be added to stack on top then space freed up after it ran
+			dyanmic i.e pointers use -> otherwise you use .
+			
+		Scope and lifetime determine graphical widget visibility and accessibility
+		Deallocation and parent pointer
+			parent pointer doesn't refer to inheritance heirarchy
+			parent identifies object responsible for deallocation of supporting widgets
+		without main()
+		outside of main()
+	main() example
+		dialog using static and dialog using dynamic
+	Popup dialog example
+		using static and dynamic 
+			static: dialog (in a SLOT function) will show and close so fast that you don't see it because scope is from {}
+			dyanmic: scope is still {}, but the memory that new points to still persists after that function block (i.e its allocated to the program)
+				QDialog* d = new QDialog(this);
+					gives the code the address of the dialog w in the main.cpp which why you can close the main dialog and it will delete all the other popups you might've spawned from the main dialog
+				absence of this: won't close all dialogs(popups), only the main one
+			
+			
+			
+			
+			
+			
+	

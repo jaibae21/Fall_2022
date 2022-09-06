@@ -1,0 +1,88 @@
+***Pre-Class
+Layout
+	No need for hard-coded positions
+	smooth, automatic resizing of windows
+	
+Signal Slot
+	USer interaction with an on-screen widget is an event
+	generic event handler event() may respond to any type of event
+	specific event handlers respond to one type
+	an event handler will excute and emit a signal, which will trigger excution of any connected slot functions in some order
+	a signal emitted by a widget (object) indicates a user action (event) or state change
+		one signal can be connected to multiple slots within an object or multiple slots across several different objects
+		a signal can also be connected to another signal 
+	a slot is a function that automatically excutes in response to connected signal that was emitted
+		all slots connected to a signal are called when that signal is emitted
+	Example 1:
+		SIGNAL and SLOT must be used with QObject::connect()
+	Example 2: 
+		Qt5 style utilizes function pointers
+	Overloading Signals/Slots
+		changing text based on a slider
+			need to identify signal emitted by QSlider to indicate a change in it's current setting
+			valueChanged is emitted upon each change in current value 
+				void valueChanged(int value)
+			Qlabel's setText and setNum slots may change the current value displayed
+				void setText(const QString& s)
+				void setNum(int num)
+				void setNum(double num)
+			Assuming slider and label are pointers to QSlider and QLaber
+				Qt4 style
+					connect(ui->slider, SIGNAL(valueChanged(int)), ui->label, SLOT(setNum(int)));
+				Qt5 style
+					connect( ui->slider, &QSlider::valueChanged, ui->label, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
+	To break existing signal-slot connection use disconnect in place of connect
+	Custom Signals/Slot (example)
+	
+		
+		
+	
+	
+**In-Class
+	we use QWidget
+	.ui file is th drag and drop
+	this refers to the memory address of W, or what you are currently referencing
+	signals have a block with a little wifi like waves coming from it
+
+
+Widget Programming
+	Widget Pallete
+		
+	Object Viewer
+		
+	Property Editor
+		Properties grouped by base classes within tree
+		Object name: name of pointer variable used
+		Font: change font properties
+		Frame: add frame around a QLabel
+		Text: allows you to alter text displayed within a QLabel or Pushbutton
+	Layout Toolbar
+		apply verticalbox, horizontalbox, grid etc
+	
+Modifying form Widget Properties via source code
+	other than object name, these properties must be modified by source code
+	each form has two components
+		derived widget object
+		formm object which is accessible via the ui pointer
+		constructor initalizer places a valid address for the form in the ui pointer
+	all widgests on the form are dynamically allocated by the statement ui->setup(this);
+		holds the address of the form which delegates the memory for the widgets
+		don't delete this statement
+		don't attempt to access form widgets prior to execution of this statement 
+
+Signal Slot Mechanism
+	Object that experiences the event emits the signal
+		many types of events
+	slot functions that should execute in response to the event are triggered by the emitted signal 
+	connect statement ties a signal emitted by an object to excution of a slot function
+	disconnect may be used to break the connection between the signal and slot
+	qt4 style uses macros SIGNAL and SLOT
+	qt5 style uses function pointers
+	
+yes/no In class Example
+	drag and drop form editor
+	property editiing: renaming widget objects, font adjustment, etc
+	layouts and spacers
+	qt4 signal slot connection
+	qt5 signal slot connection 
+	qtDebug module and qDebug() output to console 

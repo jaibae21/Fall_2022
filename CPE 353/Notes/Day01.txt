@@ -1,0 +1,30 @@
+canvas email
+**Intro to Qt & Command line
+	Qt Compliation 
+		source file plus graphical form builder (2 sources of source code sort of)
+		compiled into c++ code
+		which is then taken to the build kit for a specific platform
+	& allows gedit to run in background
+	
+	Steps for compiling
+		qmake -project
+			check .pro that it has appropriate stuff needed for what you're doing
+			needs the Qt += core gui widgets
+				3 libraries needed
+		qmake
+		make
+			fix any compile errors
+		./run program
+		
+	Using the help documentation
+		PUshButtons
+			Inheritance: inherits from QAbstractButton (parent) which inherits from Qwidget which inherits from Qobject and QpaintDevice 
+			classes derived : QCommandLinkButton
+			attributed added to pushbutton to distinguish from parent : 3 new properties and member functions (12) 
+			constructors: 3 (first 3 listed)  
+			name of observer method that allows one to view text displayed: text() const
+			data type returned by obersver : qstring
+			function prototype of transformer method that allows text modification: void setText(const Qstring & text)
+			event handlers dedicated to mouse press events: mouserelease, press, 
+			overloaded: (list of all members) look for repreaed function names
+			observers are const methods 

@@ -1,0 +1,19 @@
+**Syllabus
+canvas email or gmail 
+anything in java is up to use, third party needs to told in advance and provided
+team meetup sometime in septemember use class time (no actual class held)
+we say what the best component is which gets graded with more scrunity
+
+8_23
+**Going over Project
+Model View Control pattern -similar to how the files for unity games are setup 
+JEditorPane class + html for displaying text
+swing for gui env
+animation cant be in a loop - need to use time
+everything in 2d 
+can write to the teacher's home directory and create a sub-directory there to throw files when project is turned in but probably best to try in some cases to just throw files within the project folders using ./filepath
+
+8_25
+**
+this is a that : inheritance
+this has a that : composition - destroy composed part = destroy all the parts

@@ -1,0 +1,34 @@
+
+*UDP
+nc -u 127.0.0.1 5678
+
+*TCP 
+nc -l 127.0.0.1 5678
+
+Need QT += network in the .pro file to use
+Loop back address QHostAddress::LocalHost
+DataStream version Qt_4_4
+
+**Networking
+	UDP
+		low overhead protocol, no "connection" 
+		Typical use: streaming media, VoIP, Real-time multiplayer gaming
+		Not for applications where reliability is required
+		Sender App
+			Line Edit
+			Send button
+			Quit button
+			Uses DataStream abstraction object
+		Receiver App
+			Label
+			the incoming UDP message replaces the prev text in the Label
+	QT code
+	bindmode default: defaultPlatform (or something like that)
+	default port is 0
+	pendingDatagrams: loops on the messages coming in and adjusts size for each incoming message
+		read a message -> then display : the msg then basically gets overwritten
+		
+
+
+
+** TCP
