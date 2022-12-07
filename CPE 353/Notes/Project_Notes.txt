@@ -1,0 +1,3 @@
+Project Notes:
+I would put in an input validator to prevent non numbers from being put into the ip dialog
+Potentially scale down the background picture. 

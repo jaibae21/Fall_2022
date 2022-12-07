@@ -1,0 +1,132 @@
+**Introduction
+cover letter-write for current job
+Uses modules mostly
+1 review session (different time than class) - classes recorded not zoomed
+1.1
+	Classes of computing Applications
+		10%
+		innovation
+		a second for a penny
+		computational to existing theoritcal and experimental
+			advances in vaccines was highly aided by computing
+		Personal Computer
+			single user
+			third party
+		Servers
+			large workload
+			network based
+		Supercomputers
+			capabilites 
+			small 
+		Embedded Computers
+			components
+				washing machines, ovens, etc
+			power/performance/cost
+	Post Pc Era
+		touch screen and voice activation
+		cloud
+	Learned from book
+		high level, hardware, hardware
+		interface, hardware, software
+		performance, program
+		hardware designers
+		reasons, consequences, sequential, parallel 
+		great ideas
+		share, hierachies
+	Understand Program Performance
+		compilers: two phase process
+			convert to lower language and optimize
+			then send to hardware
+
+1.2
+	Archtitecture Ideas (7)
+		2. don't do something very often pay for that to take longer so more frequent things can be done faster
+		3. parellism, someone has to break up the tasks and then do them
+		4. redundancy built in i.e spares
+1.3
+	Below your program
+		first register is destination following are sources
+		user program, hardware
+			basic io
+			protected
+		high-level, machine
+
+1.4
+	The Big Picture
+	Input
+	Output
+	Memory
+	Data path
+	Control
+	Control + Data Path = CPU
+		Iphone X
+			resistive and capactive
+			2x capactive
+		arm cores
+		graphics
+		neural net
+		caches
+	Safe place for data
+		volatile
+			power off
+		non-volatile
+			Magnetic
+			flash 
+			optical
+	Computing between Computers
+1.5
+	Semiconductor Technology
+	Semiconductor Manufacturing
+		conductor
+		insulators
+		semi-conductors
+1.6
+	Performance-Motivation
+		purchasers, designers
+	Defining Performance
+		Clicker questions
+	Peformance Metrics
+		ambiguity, performance
+			single, quickly
+			many, many
+		response, throughput
+		Both
+		throughput
+	Performance related to Excution Time
+		Written
+	CPU performance and factors
+		written
+	Performance Summary
+		instructions, CPI (if it changes mix of instructions)
+		instructions, CPI
+		instructions, CPI
+		IC, CPI, CT
+	Ex. Clicker
+		A given application is written that runs in 15s. A new compiler requires only 0.6 times as many instructions as the old compiler. It increases CPI by 1.1. How fast can we expect the application to run using the new compiler? 
+1.7
+	Power Wall
+		cooling
+		CMOS = dynamic
+		voltage
+		voltage, leakage
+1.8
+	Switch from Uniprocessors to multiprocessors
+		power, instruction, memory
+		not enough things that can be done in parallel
+	Multiprocessors need new programming paradigms
+		more, one
+		explicitly parallel
+			instruction
+				hardware, multiple
+				hidden
+		load
+			not being as fast as some other component
+		communication, synchronization
+			communcation: transferring data, want to keep as local as possible 
+			sychronization: not being able to move onto one part until everyone finishes the previous part
+1.9
+	SPecSpeed 2017 Integer Benchmark
+		written
+	
+	
+	

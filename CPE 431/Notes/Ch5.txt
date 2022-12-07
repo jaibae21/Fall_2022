@@ -1,0 +1,354 @@
+**Memory Heiracrchy
+
+5.1 Introduction
+		unlimited, fast, illusion
+		Temporal: items referenced recently will be referenced again
+			MIPS will touch memory one __ times
+		Spatial: items close to items referenced recently will be referenced
+		heirarchy
+	Cache Terminology
+		two
+			analogous to backpacks and getting things
+		line/block
+		hit
+		miss
+	More Terminology
+		hit rate
+		miss rate
+		hit penalty
+		miss penalty
+		can pay a penalty even though you find it bc it pays to look
+5.2 Memory Technologies
+		Static (SRAM)
+			takes same amount of time to access any item
+			6 transitor cell, maintains value with power
+		Dynamic (DRAM)
+			1 transistor actings as a gate to a capacitor
+			which means it has to be refreshed. time vs space
+		Magnetic
+			replaced by solid state
+		SRAM
+		disk
+	DRAM Technology
+			charge, capacitor
+		transistor, charge
+		refreshed
+		read, write
+		row
+	Advanced DRAM Organization
+		Rectangular array
+		entire row
+		burst, successive, row, reduced, latency
+		double
+		rising, falling
+		quad
+		inputs, outputs
+	DRAM Generations
+		
+	DRAM Performance Factors
+		row buffer
+		several, parallel
+		synchronous DRAM
+		consecutive, each address
+		bandwidth
+		DRAM banking
+		simultaneous, multiple
+		bandwidth
+	Increasing Memory Bandwidth
+		written
+	Flash Storage
+		nonvolatile
+		100 * -1000  disk
+		smaller, lower, robust
+		disk, DRAM
+	Flash Types
+		
+	Disk Storage
+		nonvolatile, rotating magnetic 
+	Disk Sectors and Access
+		sector
+		ID
+		512, 4096
+		error
+		defects, errors
+			voltolerance: designing with intent of defects
+		Synchronization
+		sector
+		Queuing
+		seek
+		rotational 
+		transfer
+		control
+		Example
+			written
+5.3 Burning Question
+		eactly one, direct
+	Tags and Valid Bits
+		which
+		block address, data
+		high order
+		tag
+	Accessing a Direct Mapped Cache
+		written
+	Mapping Implemented in Hardware
+		byte offset used to select a byte within a word
+		comparator checks tag sotred vs referenced one
+			if it matches and valid is 1 = hit
+	Total Storage Requred
+		written
+	Mapping an address to a multiword cache block
+		written
+	Miss rate versus block size 
+		
+	Handling cache misses
+		normally
+		stall
+		hieararchy
+		fetch
+		data access
+	Handling writes - write - through
+		write hit
+		inconsistent
+		also update memory
+		1+0.1*100 = 11
+		write buffer
+		stalls, write, write buffer
+	Handling writes - Write back
+		block cache
+		dirty 
+		dirty
+		memory
+		replacing, first
+5.4 Measuring Cache Performance
+	Cache Performance Example
+		written
+	Average Memory access time
+		AMAT
+		written
+		written
+		2
+	Performance Summary
+		
+	Improving Cache Performance through flexible placement
+	
+	Set associativity conceptually
+	
+	Set associativity: pseudo implementation
+	
+	Miss Rate vs Associativity
+	Clicker: A(2), E (1), E (1), B (4)
+	Cost/Performance of associativity
+	
+	set associativity the hardware
+	
+	Tag Size considerations
+		written
+	Clicker: F (0), E (1), A(2), D (5)
+	Performance of multilevel caches
+		written
+	Interactions with software
+		algorithm
+		compiler
+	Software Optimaztion
+		
+	Cache blocked DGEMM
+	
+	Summary
+		significantly affect
+		rates, penalties
+		associative, rates
+		multi-level, penalities
+		private, share
+	Clicker: b (6), C (7), E(19), A (5), A(5), E (22), D(1010-1011), D (9), D(9), D(0x6B20 - 0x6B3F), 
+	
+5.5 Dependable Memory Heiracrchy
+		service delivered as specified
+		service different from specified
+		failures, restorations
+		permananent, intermittent
+		meant time to failure
+		availability
+	MTFF vs AFR for Disks
+		written
+	Availability considerations
+		
+	Single Error Detection - Parity
+		bits, different
+		parity
+		
+	Encoding Single Error Correcting Hamming Code
+		1, left (or right but need to agree which way you're doing)
+		power of 2, parity, 1,2,4,8,16 etc
+			0 is the everything is good condition 
+		3, 5 ,6, 7, 9 10, etc
+		parity, data
+		1, 0 (3, 5, 7, 9, 11....)
+		2, 1 (3, 6, 7, 10, 11, 14, 15)
+		4, 2 (5, 6, 7, 12, 13, 14, 15)
+		8, 3 (9, 10, 11, 12, 13, 14, 15)
+		2^n, n
+		parity, even
+			parity is what we use to encode and check bits when decoding 
+	Decoding Single Error Correcting Hamming Code
+		Value, (check), in error
+		encoding
+		0000 indicated no error
+		1010, 10
+	Example
+		written
+	SEC/DED Hamming Code
+		whole word
+		4
+		no error
+		a correctable single error
+		error occured in pn bit 
+		double error
+			#data bits = d
+			#parity pits = p
+			2^p >= p + d + 1
+	Encoding Single Error correcting/double error detecting
+		written
+	Decoding Single error
+		written
+	Virtual Memory
+		mainframe
+		isolation, secruity 
+		secruity, reliability 
+		sharing
+		raw speed
+		emulation, java virtual machine
+		system-level, isa
+	Virtual Machince Basics
+		entire computer, operating system
+		share, hardware
+		virtual machine monitor (VMM) hypervisor
+		host, guest
+	Virtual machine ancillary benefits
+		protection
+		Managing software
+		managing Hardware
+	Requirements for a virtual machine monitor
+		native hardware, performnce-related, fixed resources
+		change allocation
+		two, system, user
+		privileged, system, resources
+	Planning ahead makes VMs more efficient only if you do it
+		directly, virtualizable
+		virtualization, x86, ARM7, MIPS
+		virtual, user, vmm, hardware, trap
+	Virtual Memory
+		cache
+		hardware, operating system (os)
+		share
+		private virtual
+		protected
+	Virtual Memory Terminology
+		block, page
+		miss, page fault
+	Design Choices
+		4 Kilbytes, 16 kibytes, 32 Kibytes, 64 kilByte, 1 Kibytes
+		fully associative 
+		software
+		back, through
+	Virtual Memory Mapping
+		indexes
+			page offset: used to select particular item within the page you want
+			18 bits of physical page number out of a 30 bit address
+			Lookup table needed (2^20 possible page numbers = 1 MB)
+		program, page table
+		page table, start, page table
+			page table register
+		one level
+		state, process, page table register, program counter, saved registers
+	Page Faults
+		replacement
+		space on disk
+		swap, space
+		each virtual page, processes, virtual, physical
+		least recently used
+		
+	The TLB
+		tells us where to go to get what we want
+		two, translation
+		cache, recent
+		translation lookaside buffer
+		may, may not
+			no mapping means page fault
+			
+		Characterstics
+			fully associative
+			1-2
+			05-1
+			10-100
+			0.01-1%
+		(Pages of page table come in and out of memory. Can be mapped to physical or disk)
+		Would hope they were in physical, bc otherwise you have to go to a translation which can results in a page fault
+		
+	Implementing protection with virtual memory
+		kernel
+		writeable
+		page table, protected, operating system
+	Summary
+		large, spatial, miss
+		page table, fully associtaive
+		LRU, reference
+	Cost of finding a block
+		written
+	Pate Table Problem
+		written
+	More Sophisticated replacement policies
+		Complex, costly
+		close, implement
+		approximation
+	Write policy choice
+		
+	The Three CS
+		cache empty at startup
+		can't hold them all
+		map to the same place
+		challenge, miss, negatively
+	Finite state cache controll ER
+		
+	Two or more processors share an address space but have different values
+	
+	Snooping
+		written
+	Concluding Remarks
+		different block sizes
+		lower level) farther away caches have time to implement strategies
+		reorganizing program to inhance locality 
+			example, rewrite matrix multiply
+		prefecthing 
+		speical cache aware instructions 
+			can say don't wanna cache
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

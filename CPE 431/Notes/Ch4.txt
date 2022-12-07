@@ -1,0 +1,250 @@
+**Processor
+
+4.1 Implementation Basics
+	Performance Factors
+		single cycle = cpi 1
+	Basic MIPS Implementation
+		lw, sw, add, sub, and ,or, slt, beq, j, addi
+		
+	Implementation Overview
+		instruction fetch
+		read two registers
+		instruction decode
+			Last two done in parallel
+	multiple sources = mux
+	if (branch target)
+		PC = label
+	else
+		PC = PC +4
+	
+	4 ports to register: read, read1, write
+	
+
+4.2 Sequential elements
+	Register, write
+	clock edge, 1
+	stored, later
+	Two Classes of Logic
+		combinational: function of input and state
+		sequential: function of input
+	Two Logic Values
+		asserted
+		deasserted
+	Clocking methodology
+		read, written
+		edge triggered
+		longest, clock period
+	
+4.3 Instruction Fetch and Default Sequencing 
+	lw t0, 0(s0)
+		memory accesses: 
+			instruction fetch
+			read the data
+	R-type
+		2, values
+		arithmetic/logic
+		store result, destination
+		
+	lw/sw
+		operands
+			use one on lw
+		effective address, 16
+		laod: memory, resgister
+		sotre: register, memory
+	beq
+		subtract
+		effective
+		
+		if eq zero = 1
+		else zero = 0
+	Creating single data: r-type 
+		lw/sw
+			single cycle
+			instructions, data
+	
+	
+4.4 Defining Necessary Control
+	
+	
+4.5 The laundry analogy
+	
+	Single Cycle vs Pipelined Performance
+	
+	Pipeling Considerations
+	
+	
+4.6 Data Hazards
+	
+	Two instuction Forwarding
+	
+	More on Forwarding
+	
+	compiler can help
+	
+	Stalling on control Hazards
+	
+	Prediction for control hazards
+	
+	More Realistic Branch Prediction
+
+4.7 Identifying the Pipeline stages	
+	
+	Generating and Saving Control lines
+
+4.8 Data dependencies 
+	
+	Forwarding Unit: Classifying Hazards
+		EX, one, EX/MEM
+			R[rs] : a input
+			R[rt] : b input
+		EX, 2, MEM/WB
+			R[rs]
+			R[rt]
+	Type 1
+		jump,sw,branch doesn't write to reg
+		Ahead 1 writes to reg
+			EX/MEM is the register ahead1: RegWrite =1 
+		doesn't have zer
+			ex/mem : regDst != 0
+		ahead1 writing to a register read by current instruction
+			ex/mem RegRD = ID/EX RegRs
+			Ex/emem regRd = Id/ex regRt 
+	Type 2
+		Mem/WB regwrite = 1
+		MEm/wb regRd != 0
+		Mem/wb regRd = Id/ex regRs
+		Mem/wb regRd = Id/ex regRt
+	Type 1 and 2 at same time
+		type 1 supersedes 
+		
+	set control signals to 0 to stop anything from affecting the state of the machine during a stall
+	
+4.9 Control Hazards
+	Reducing delay of branches
+		Compute branch target
+		evaluate branch decision 
+		move both to ID stage
+			don't know what instuction it is yet so not moved to IF
+		only one instruction needs to be flushed
+	Dynamic
+		deeper, superscalar, penalty
+		dynamic
+		history
+		indexed, recent
+		outcome
+		table, same
+		prediction
+		update
+	1 bit history
+		last, inner
+		first, inner, next time
+4.10 Exceptions and Interrupts
+	Unexpected, flow
+	within the cpu
+	external
+	offending (interrupted)
+	Cause
+	0x8000_0180
+	Vectored
+	address, cause
+	deal with
+	jump, real
+	Read cause, relevant
+	restartable
+	EPC, program
+	terminate
+	error
+	Restarable
+	flush
+	refected and executed from scratch
+	EPC
+	causeing
+	PC + 4
+	handler
+	Multiple Exceptions
+		overlaps
+		multiple, at once
+		earliest
+		subsequent 
+		precise
+		multiple, per cycle 
+		out of order
+		precise, difficult
+	Imprecise Exceptions
+		stop, save state
+		which instructions(s) need exceptios
+		which to complete or flush
+			hardware faster than software
+		hardware, more complex handler
+4.11 Parallelism via instructions
+		instruction level parallism
+		issue
+		replicate
+		multiple
+		IPC- instructions per cycle
+		IPC
+		dependencies
+	Multiple Issue
+		Static
+		compiler, issued
+		Packages, issue slot
+		compiler
+		Dynamic
+		CPU, chooses, issue
+		compiler, reordering
+		resolves, runtime
+	Speculation
+		check
+		complete
+		roll-back
+		common
+	Complier/Hardware Speculation
+		load, branch
+		fix-up, incorrect
+		look ahead
+		buffer, actually needed
+		flush, incorrect
+	Scheduling Static Multiple Issue
+		within
+		between
+		nop
+	MIPS Static Dual Issue
+		compiler takes care of scheduling 
+		can't find an r-type and lw to run at same time then you have to put in a nop
+	Speculation
+		branch
+		branch outcome
+		load
+		load, cache miss
+		effective address
+		loaded
+		load, stores
+		stored, load (or forward instead of bypass)
+		load, cleared
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

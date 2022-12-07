@@ -1,0 +1,56 @@
+
+(Day 
+**Drag and Drop
+	transfer of data within an application between applications
+	drag is down through a LMB
+		reimplement mousePressEvent()
+	MIME: multipurpose internet 
+		data type of different formats that qt can mess with
+	Data sink
+		recipent of the data
+		
+		
+		
+Day10
+**ModelView
+
+
+Day11
+**2D Graphics
+Painter object is actually doing the painting
+	QPainter
+		basis of qt graphics
+			enable drawing of all basic shapes, text, pixmaps
+			enable basic transformations 
+		methods are overloaded
+		can specify line style, color, and width of pen
+			font, brush style
+		join style 
+			specifies how a corner will look when to lines/shapes intersect
+		cap style
+			end cap styles
+		Coordinates
+			Upper left corner is the origin. Y goes down and x goes across the top
+			Viewport is the physical coords
+			window and world is logical coords
+		Aliasing: trying to use discrete sampling to render a continuous shape
+		Anti-aliasing is a strategy for pixel intensity to be proportioanl to the amount of line overlap area
+			use qt built in anit-aliasing
+		Easiest way to display the pixmap is to create a label and use the setpixmap method
+	QColor
+		RGB representation
+			8 bits for each color and 8 bits for transparency
+		0xAARRGGBB
+		QColor x(R,G,B,alpha) or y("color")
+		HSV: hue saturation brightnessValue
+		CMYK: Cyan magental yellow black
+		QT internally uses RGB
+	QPixMap vs QImage
+		pixmap is designed for dispalying objects on the screen
+		image operations performed by processor
+			also uses RGB and may or may not use alphay
+			
+	QImage
+		can use scanLine to retrieve pixel color information
+		qt resolves byte order by RGB datatype and based on platform it will reinterpret values for correct platform
+		the graphics manipulation is handled by two different things

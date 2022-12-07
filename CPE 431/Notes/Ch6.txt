@@ -1,0 +1,160 @@
+Parallel Processors from Client to Cloud
+
+6.1 Parallel Processing Has always been a good idea,
+	power efficiency 
+	fault tolerance
+6.2 if it were easy to create parallel programs, we would have 
+	hardware, software
+	scheduling, load balancing, synchornization time, communication overhead, amdahls law
+	Speedup Examples
+		written
+6.3 Multiple approaches to parallel programs
+	Two interpretations of SIMD
+		Multimedia Extensions
+			widely
+			multimedia
+				width of operations encoded in opcode
+		Vector
+			aX[i] + y[i]
+			x[i] is in s0 and y[i] is in s1
+			load vector loads all of the things
+			size of operand stored in register
+	Vector advantages over Scalar
+		single  vector, fetch, decode
+		data hazard within
+		data-level parallelism
+		data, once, instruction, once, vector element
+		known access pattern
+		loop, vector instruction, control
+	Vector Advantages over multimedia extensions
+		register,opcodes
+		not,contiguous 
+		evolve, gracefully
+6.4 Mutlithreading 
+		multiple threads, share, function, overlapping
+		duplicate, state, thread
+		ability, change, threads
+		fine grained, threads,instruction
+			throughput, thread stalls
+			latency, no stalls
+		Coarse grained, switches, costly, second-level cache
+			throughput, shorter, fill time
+	Uses resources of multiple issue, dynamically scheduled pipelined processor to exploit thread-level parallism
+		functional unit parallelism, single
+		resolution, dynamic scheduling
+		
+	utilization: 40 slots in each case, 19 full in the first one. 
+		19/40, 20/40,39/40
+6.5 SMP offers single physical address space across all processors
+		shared variables
+		UMA, NUMA
+		sychronization, lock
+	Share address space parallel program
+		each processor is responsible for 1000 partial sums 
+		
+		partial, combine, single, reduction
+		
+		number of levels (log(2)(64)
+		
+	OpenMP
+		limited, popular
+		openMP, application programmer interface, compiler, directives, environment, routine
+		portale, scalable, simple
+		parallelize loops, reductions
+		openMP, c, pragmas
+		write, debug
+			example:
+6.6 Graphics processing is example of data-level parallelism
+		gaming industry, development community
+		accelerators, supplement, everything
+		MB, GB, GB, TB
+		multi-level, threads, hide
+		bandwidth, latency, wider, bandwidth
+		multithreaded, processors
+	C-inspired programming languages
+		compute unified duece architecture
+		multi-company, portable
+		CUDA thread
+		COmputer, hardware, multithreading, MIMD, SIMD, instruction level parallelism
+		blocked, groups, 32
+		multithreaded, 15, 128, multithreaded
+	GPUs have gather-scattter data transfers
+		MIMD
+		15, 24, 56, 80
+		hardware
+		thread block, blocks, threads
+		SIMD thread, when SIMD
+	Nvidia GPU memory structures
+		on chip, shared, within
+		not,between
+		off-chip, whole GPU, thread blocks
+		vectorizable loop, one, more
+		
+6.7 Domain Specific architectures = path to improved performance and energy efficiency 
+		standard, domain specific
+		dedicated, distance
+		arithmetic units, memories
+		size, type
+		halide, tensorflow
+	Popular DSA is AI/machine learning 
+		bioinfromatics, image, simulation
+		set, rules, machine learning, data
+		data volume, computation
+		deep neural networks, 2012
+	Google's tensor
+		2006, existing
+		2013, double, 3
+		15
+		2015
+	Architecture of TPU differs from CPUs and GPUs
+		256
+		256, 256
+		8, 16, 32, floating point
+		4 MB, 24 MB
+		4, GPU
+		700 MHz, 90 tera-operations
+		half, 75 W, half
+	Traditional Architectures are still widely used in clusters where processors communicate by sending messages
+		sharing, private physical
+		send, receive, coordination
+		custom high-performance message-passing, supercomputers
+		web search, mail, file, shared
+		clusters, message-passing
+		distinct, os
+		on chip, off chip
+	Warehouse scaling computers
+		ample, easy, request level
+		operations, purchase, 30%, 10 yrs
+		Scale, scale
+		200,000, 5, day
+		4, 4, 1, hour
+		fault tolerance
+	Cloud Computing
+		2012, every day, 6,000, 5.2 billion
+		10%
+		40
+	Judging Networks
+	
+6.15
+	
+
+	Concrete example is Matrix multiple on intel core i7
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

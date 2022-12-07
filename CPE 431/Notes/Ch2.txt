@@ -1,0 +1,167 @@
+**Instructions: Language of Computer
+2.1
+	Introduction
+		instruction, instruction set architecture
+		MIPs
+			ARMv7
+			Intel x86
+			ARMv8, ARMv7
+
+2.2
+	Basic MIPS Arithmetic
+		a<-b + c: a gets b + c
+			a = dest
+			b, c = sources
+			3 address instruction set
+		add a, b, c
+		add a, a, d
+		add a, a, e
+		Fixing, simple
+	Compiling C into MIPS
+		(0)add a, b, c
+		(1)sub d, a, e
+		(2) written
+	Compiling C into MIPS (registers)
+		$t, $s : temporary registers and saved registers
+		written
+2.3
+	MIPS Basics
+		memory
+			load: pulls things out of memory and copies into a register
+			store: ....
+		registers
+		Data transfer
+		32, 2^32
+			byte accessible memory
+			4 8 bit bytes to make 32: 2^30 words
+		more registers = longer time to get what you want, instruction fields have to be larger (5 bits gives 32 combinations to name registers, 6 gives 64, 8 gives 256)
+		Picture(in recording)
+
+	Memory Operands: First Pass (0)
+	arrays, structs (records); base pointer; access, correct
+	(1) written  
+	
+	(2) written
+	
+	Second Pass
+		registers, memory
+		A[12] = h + A[8] : written
+	
+	Constant or Immediate Operands
+		constant
+		memory, registers
+		$zero
+
+2.4
+	Signed and Unsigned Numbers
+		overflow
+		11: 0 - 2^n -1 
+		-5:-2^(n - 1) to 2^n(n-1) - 1
+
+2.5 
+	R-Type Insturction Format
+		writeen
+	I-Type Instruction (LW)
+	+- 2^15 bytes, +- 2^13 words
+		(SW, ARITH)
+
+2.7
+		(BEQ, BNE)
+	
+	Compiling a While Loop
+	
+	Adding Less Than or Greater Than
+	i=0;i<10;i++
+	(immediate) slti $t0, $s1, 10
+	bne $t0, $zero, offset
+		if s1 is less thant then t0 gets the 1
+	slt $t0, $s0, $s1
+	bne $t0, $zero, offset
+		offset is the label
+	slti (signed by default) but can make unsigned
+
+2.8
+	Supporting Procedures in Computer Hardware
+		arguments, callee
+		control
+		allocate, resources
+		desired task
+		result available
+		control, calling
+	
+		$a0-$a3: arguments
+		$v0 - $v1: return value
+		$ra : return address
+		
+		jal : forth (jump and link)- stores instructions after the call
+		jr : back (jump return) - puts value from ra to program counter
+		
+	Compiling a Leaf Procedure
+		formal parameters - actual definition 
+		actual parameters, values associated with parameters themselves
+		
+		don't need to store or load t registers
+	
+	Leaf Example Stack
+		spill to the stack 
+		
+	Nested Procedures
+		callee saves it 
+		argument
+		temporary, after, call
+		return address ($ra)
+		saved
+		
+	Nested Compilation (factorial)
+		Execution of Fact for N = 4
+			$ra: done symbollically since you don't know where the caller location is 
+			
+			1 in $v0 in order to return to the caller
+				callee is done at this point
+	More about stack
+		
+	Heap and Register Names
+		static, dynamic
+
+2.10
+	32-BIT Immediate Operands
+		load upper 16 bits - lui
+		load lower 16 bits - ori
+		
+		16 bits for the immediate field 
+			2^16 -1 unsigned
+			-2^15 to 2^15 - 1
+		adding will sign extend and place all 1's in the upper half if you use addi
+	J-Type Instructions
+		4 other bits comes from
+			PC[31...28] & Address << 2
+		Branch far away
+			bne $s0, $s1, L2
+			j L1
+
+2.11
+	Parallelism and Instructions: Synchronization
+		producing, read
+		user-level, hardware
+		atomic
+		pair, second, returns a value
+		load, linked, ll, store conditional sc
+	Code Sequence for Atomic exchange
+		t0<-1
+		t1<-M[$s1 + 0]
+		sc M[$s1 + 0] <- t0 : looking to see if anything has changed since the load happend
+			if M[$s1 + 0] hasn't changed
+				t0 = 1
+			else
+				t0 = 0
+			if t0 is a 0 then we have to go back because we didn't get what we wanted to
+
+2.12
+	Translating & Starting a Program
+	
+2.20
+	Fallacies and Pitfalls
+	
+	
+	
+	

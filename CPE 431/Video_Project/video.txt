@@ -1,0 +1,26 @@
+Explain it to me like I'm 5 - Instruction Cycle analogy using dogs
+(Haley)
+The instruction cycle is what an instruction goes through to be executed. The instruction is fected, decoded, exectued, and then results are stored. 
+
+Here we are going to explain a very simple overview of how an instruction goes through using the analogy of a dog getting hungry. The dogs' want acts as the instructions making the human the PC. Thought processes and other actions done by the human are then the hardware necessary to do what the instructions calls for.
+
+
+
+
+(powerpoint) Kasey reads slides. Jaiden reads related info. 
+Start with dog that is hungry goes and fecthes the human. (IF)
+	Here the dog's hunger is like an instruction about to start the instruction cycle 
+The human puzzlingly looks at the dog trying to decode what the dogs wants. (ID)
+	Figuring out what the dog wants is similar to decoding an instruction
+The human figuring out what the dog wants go to grab a can a food and works to open it. Performning the neccessary steps to execute the task (EX)
+	The processes involved in opening the food is similar to how hardware has processes to execute its instruction
+Since the task was to feed the dog, the food is placed into the dog bowl (MEM)
+	The food being placed in the bowl can be compared to an instruction grabbing something from memory
+After satisfying the dog, the human proceeds with its next task. 
+	The dogs hunger has been solved which means the instruction has been completed. 
+
+
+43 to 1.37 : 54 
+30 seconds
+17 
+

@@ -1,0 +1,52 @@
+**Floating Point
+
+3.1 Introduction
+	interpreted 
+	instruction
+	signed, integer
+	unsigned, integer 
+	floating-point
+
+3.5 Floating Point Basics
+	scientific 
+		1.xxxxxx * 2^yyyyy : x = fraction, y = exponent
+		(-1)^2 : signed bit that doesn't contribute to the number itself
+	range, precision 
+		y , range
+		x , precision 
+	$0.10 : can't be represented exactly in binary so use BCD
+	32 bits
+	64 bits
+	Special Cases: For 0: E and F are 0
+
+	Decimal to IEEE FP (single precision)
+		127 bias, leading 1 is implicit
+		-0.75 = 0.11
+		written
+	
+	Double Precision
+		1023
+	IEEE FP to Decimal (single precision)
+		written
+	Double Precision 
+		written
+
+3.6 Subword Parallelism
+	color, position
+	sounds
+	subword, data transfer
+	graphics, subword
+	same operations, vectors
+	
+3.9 Fallacies and Pitfalls
+	
+
+
+
+
+
+
+
+
+
+

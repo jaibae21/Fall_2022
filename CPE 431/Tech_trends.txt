@@ -1,0 +1,23 @@
+"AI powered system that can engage in complex debate with humans over issues ranging from subsidizing preschool and merit of space exploration to pros and cons of genetic engineering"
+
+"Given 15 minutes to research and prepare for debate...."
+
+"Project Dbater is cloud-based AI system, created by IBM"
+
+"built with an NLP, natural language processing model, trained using deep learning and machine learning techniques
+
+7 yrs to develop
+
+model and scan over 400 million newspaper articles and wiki pages in the time it takes a person to finish a cup of coffee
+
+synthetic female voice, soft, human-like with a metallic edge
+
+Winner determined by taking audience vote before and after the debate
+
+2 major sources of information. massive collection of around 400 million newspaper articles. Looks for short pieces of text that satisfy 3 criteria, relevant to topic, argumentative in nature, support our side of the debate
+	collection of more principled arguments that tries to capture the commonalities between the many differerent debates that humans are having
+	
+Use watson speech recognition capabilities to understand what is articulated by the human while also trying to anticipate in advance what the opposition might argue, then listen to determine if the opposition will make those arguments
+
+cannot removes bias from sources but can somewhat recognize it b it but also pulls from verified library of resources
+

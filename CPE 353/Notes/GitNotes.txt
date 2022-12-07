@@ -1,0 +1,27 @@
+git username is jmg0053 and then normal password
+git status
+git branch #name of branch
+git checkout #name of branch 
+git pull 
+git push
+
+feature request/bug fixes associated with milestones
+Issues->new issue
+
+#Adding baselinecode into repository ( only one person does)
+cd into the repository
+create the qt project in the repository folder location
+(qt should recognize its a git repo)
+baseline code in main branch
+Qt->Tool->git->local repo->commit
+close game
+git push
+
+work an issue:
+	start a merge requests which creates a separate branch
+	follow gitlabs instructions to pull down that branch
+	
+follow the instructions from gitlab again to get out of the branch you were working in 
+
+create a branch to work specifically on other certain issues. Then push to main branch
+(Create issues for each use case and assign to sprints/backlogs)
